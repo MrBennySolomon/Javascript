@@ -1,6 +1,6 @@
 'use strict';
 
-let str = new string("Hello World");
+let str = "Hello World";
 let num = 123;
 let obj = {
   name: "Benny",
@@ -9,4 +9,12 @@ let obj = {
 let booleanValue = true;
 let nullValue = null;
 let undefinedValue = undefined;
-let symbolValue = 'unique';
+let symbolValue = Symbol('unique');
+
+console.log("str = " + typeof str);
+console.log("num = " + typeof num);
+console.log("obj = " + typeof obj);
+console.log("booleanValue = " + typeof booleanValue);
+console.log("nullValue = " + typeof nullValue);
+console.log("undefinedValue = " + typeof undefinedValue);
+console.log("symbolValue = " + typeof symbolValue);
