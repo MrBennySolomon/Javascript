@@ -7,4 +7,4 @@ function checkLeapYear(year) {
   }
 }
 
-checkLeapYear(2012);
+checkLeapYear(2400);
