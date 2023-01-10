@@ -31,7 +31,9 @@ function winner (arrTeamAndScore) {
 //console.log(winner([johnTeam, mikeTeam]));
 //console.log(winner([mikeTeam, johnTeam]));
 let johnTeam = average([89, 120, 103]);
-let mikeTeam = average([116, 94, 123]);
+let mikeTeam = average([97, 134, 105]);
 let maryTeam = average([97, 134, 105]);
+
+console.log(johnTeam, mikeTeam, maryTeam);
 
 console.log(winner([['johnTeam',johnTeam], ['mikeTeam',mikeTeam], ['maryTeam',maryTeam]]));

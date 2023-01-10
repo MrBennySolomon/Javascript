@@ -12,4 +12,4 @@ function boom (n, boomNum) {
   }
 }
 
-boom(15, 7);
+boom(100, 3);
