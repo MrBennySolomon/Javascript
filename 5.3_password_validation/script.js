@@ -18,6 +18,6 @@ function validation3(password) {
   }
 }
 
-const advanced = password => password.length <= 7 ? 'Weak' : /[A-Z]/.test(password) ? 'Very Strong' : 'Strong' ;
+const advanced = password => password.length <= 7 ? 'Weak' : /[A-B]/.test(password) ? 'Very Strong' : 'Strong' ;
 
 console.log(advanced("12345Dxx6"));
