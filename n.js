@@ -17,3 +17,27 @@ const country = "Canada";
 const language = "english";
 
 countryToLiveIn(language, isIsland, population, country);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
