@@ -26,4 +26,4 @@ function languageInfo(language) {
   return info;
 }
 
-console.log(languageInfo('Spanish'));
+console.log(languageInfo('English'));

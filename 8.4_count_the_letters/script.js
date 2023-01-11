@@ -21,27 +21,26 @@ const lettersCount = (array) => {
 
 };
 
-// const checkMax = dict => {
-
-//   let maximum = 0;
-
-//  // for (const max in dict) {
-//   for (const [key, value] of Object.entries(object1)) {
-//     console.log(`${key}: ${value}`);
-//   }
-
-//     console.log(dict[max]);
-//     if (dict[max] > maximum) {
-//       maximum = dict[max];
-//     }
-//   }
-
-//   return maximum;
-// }
-
-
 //console.log(checkMax(dict));
 
 lettersCount(array);
 
 console.log(dict);
+
+let maximum = 0;
+let key;
+
+let winner = {};
+
+ // for (const max in dict) {
+  for (let [key, value] of Object.entries(dict)) {
+
+    console.log(value);
+    if (value > maximum) {
+      maximum = value;
+      winner.char = key;
+      winner.count = value;
+    }    
+  }
+
+  console.log(winner);
