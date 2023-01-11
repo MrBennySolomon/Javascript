@@ -11,7 +11,13 @@ const myCountry = {
 
   describe () {
     return `${this.country} has ${this.population} million people, their mother tongue is ${this.language}, they have ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`;
+  },
+
+  checkIsland() {
+    return this.neighbours.length ? false : true;
   }
 };
 
 console.log(myCountry.describe());
+
+console.log(myCountry.checkIsland());
