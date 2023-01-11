@@ -12,31 +12,30 @@ const book2 = {
 
 let bookUtils = {
 
-  setLanguage(book, language) {
-
-    this.language = language;
+  getFirstPublished:(book1, book2) => {
+    return book1.year <= book2.year ? book1 : book2;
   },
 
-  setTranslation(book, language, translator) {
-    this.translation = {
+  setLanguage:(book, language) => {
+    book.language = language;
+  },
+
+  setTranslation:(book, language, translator) => {
+    book.translation = {
       translator: translator,
       language: language
     };
   },
 
-  setPublisher(book, name, location) {
-    this.publisher = {
+  setPublisher:(book, name, location) => {
+    book.publisher = {
       location: location
     };
-  }
+  },
 
-  isSamePublisher(book1, book2) {
+  isSamePublisher:(book1, book2) => {
     return ((book1.name === book2.name) && (book1.location === book2.location));
   }
-};
-
-bookUtils.getFirstPublished = (book1, book2) => {
-  return book1.year <= book2.year ? book1 : book2;
 };
 
 bookUtils.setNewEdition = (book, year) => {
