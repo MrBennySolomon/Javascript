@@ -64,21 +64,20 @@ console.log(before1990(data));
 // times that food is present in all the objects as the value.
 const foods = data => {
   let foodObj = {};
-  let counter = 0;
   data.forEach(element => {
-    for (let i = 0; i < element.meats.length; i++) {
-      if (!foodObj.hasOwnProperty(element.meats[i])) {
-        foodObj[element.meats[i]] = 1;
+    for (let i = 0; i < element.favoriteFoods.meats.length; i++) {
+      if (!foodObj.hasOwnProperty(element.favoriteFoods.meats[i])) {
+        foodObj[element.favoriteFoods.meats[i]] = 1;
       }else {
-        foodObj[element.meats[i]] = foodObj[element.meats[i]] + 1;
+        foodObj[element.favoriteFoods.meats[i]] = foodObj[element.favoriteFoods.meats[i]] + 1;
       }
     }
 
-    for (let i = 0; i < element.fish.length; i++) {
-      if (!foodObj.hasOwnProperty(element.fish[i])) {
-        foodObj[element.fish[i]] = 1;
+    for (let i = 0; i < element.favoriteFoods.fish.length; i++) {
+      if (!foodObj.hasOwnProperty(element.favoriteFoods.fish[i])) {
+        foodObj[element.favoriteFoods.fish[i]] = 1;
       }else {
-        foodObj[element.fish[i]] = foodObj[element.fish[i]] + 1;
+        foodObj[element.favoriteFoods.fish[i]] = foodObj[element.favoriteFoods.fish[i]] + 1;
       }
     }
    
