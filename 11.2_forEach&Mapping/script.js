@@ -53,12 +53,39 @@ const strVowelCount = str => {
 console.log(strVowelCount("Benny Solomon"));
 // 5. Write a function capitalize that takes a string as an
 // argument and will return the whole string capitalized.
-
+const capitalize = str => {
+  return str.toUpperCase();
+}
+console.log(capitalize("Benny Solomon"));
 // 6. Write a function called shiftLetters that takes a string as an
 // argument and return’s an encoded string with each letter
 // shifted down the alphabet by one.
+const shiftLetters = str => {
+  let arr = str.split('');
+  let newArr = [];
+  arr.forEach((element, i) => {
+    newArr.push(String.fromCharCode(element.charCodeAt() - 1));
+  })
+  return newArr.join('');
+}
+console.log(shiftLetters("abcdefg"));
 
 // 7. Create a function called swapCase that takes a string as
 // an argument and returns a string that every other word is
 // capitalized. (you can use the fifth’s exercise's function to
 // keep it dry)
+const swapCase = str => {
+  let arr = str.split(' ');
+  let newSrr = [];
+
+  arr.forEach((element, i) => {
+    if (i % 2 === 0) {
+      newSrr.push(element.toUpperCase());
+    }else {
+      newSrr.push(element);
+    }
+  })
+  return newSrr.join(' ');
+}
+
+console.log(swapCase("Benny Solomon Good Learning"));
