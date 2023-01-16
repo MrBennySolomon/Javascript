@@ -42,7 +42,13 @@ const school = {
 // 1. A method called “findPerson” takes two arguments, a type
 // (either a student or teacher), and an id. It will return a
 // particular object of that person.
+const findPerson = (type, id) => {
+  return school[type].find(item => {
+    return item.id === id;
+  })
+};
 
+console.log(findPerson('teachers', 2));
 
 // 2. A method called “assignStudent” that takes two
 // arguments, a student’s id and a subject. Assign all of the
@@ -50,7 +56,20 @@ const school = {
 // subject and who is not in full capacity. If all of the teachers
 // are in the full capacity log to the console “Sorry, no
 // available teachers left”.
+const assignStudent = (studentId, subject) => {
+  const openTeacher = school.teachers.find(item => item.capacityLeft > 0 && item.subjects.includes(subject));
 
+  if (openTeacher === undefined) {
+    return 'Sorry, no available teachers left';
+  }else {
+    openTeacher.capacityLeft = openTeacher.capacityLeft - 1;
+    return `You were succecfully assigned to ${openTeacher.name}`;
+  }
+};
+
+console.log(assignStudent(10, "history"));
+console.log(assignStudent(10, "history"));
+console.log(assignStudent(10, "history"));
 
 // 3. A method called “assignTeachersSubject” that takes two
 // arguments, the teacher’s id, and a new subject. Assign the
