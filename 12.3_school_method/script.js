@@ -75,7 +75,26 @@ console.log(assignStudent(10, "history"));
 // arguments, the teacher’s id, and a new subject. Assign the
 // new subject to that particular teacher if that subject
 // doesn’t exist in their array of subjects.
+const assignTeachersSubject = (teacherId, newSubject) => {
+  school.teachers.forEach(element => {
+    if (element.id === teacherId && !element.subjects.includes(newSubject)) {
+      element.subjects.push(newSubject);
+    }
+  });
+};
 
+assignTeachersSubject(2, 'Hebrew');
+console.log(school);
 
 // 4. Create a new method for anything you want.
 
+const fireTeacher = (teacherId) => {
+  const index = school.teachers.forEach((element,i)  => {
+    if (element.id === teacherId) {
+      school.teachers.splice(i, 1);
+    }
+  });
+};
+
+fireTeacher(2);
+console.log(school);
