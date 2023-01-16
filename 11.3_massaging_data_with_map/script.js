@@ -62,3 +62,28 @@ console.log(before1990(data));
 // 3. Create a function that returns an object of all the different
 // foods from all the objects as the key and the number of
 // times that food is present in all the objects as the value.
+const foods = data => {
+  let foodObj = {};
+  let counter = 0;
+  data.forEach(element => {
+    for (let i = 0; i < element.meats.length; i++) {
+      if (!foodObj.hasOwnProperty(element.meats[i])) {
+        foodObj[element.meats[i]] = 1;
+      }else {
+        foodObj[element.meats[i]] = foodObj[element.meats[i]] + 1;
+      }
+    }
+
+    for (let i = 0; i < element.fish.length; i++) {
+      if (!foodObj.hasOwnProperty(element.fish[i])) {
+        foodObj[element.fish[i]] = 1;
+      }else {
+        foodObj[element.fish[i]] = foodObj[element.fish[i]] + 1;
+      }
+    }
+   
+  })
+  return foodObj;
+}
+
+console.log(foods(data));
