@@ -41,7 +41,16 @@ console.log(showFirstAndLast(strArr));
 // the string. The key should be the vowel and the value
 // should be the count. e.g. {a:3, o:2,u:4}. Should not be
 // case-sensitive.
-
+const strVowelCount = str => {
+  let newObj = {};
+  let arr = str.split('');
+  arr.forEach((element) => {
+    if(element === 'a' || element === 'e' || element === 'i' || element === 'o' || element === 'u') {
+      newObj[element] = typeof newObj[element] === 'number' ? newObj[element] + 1 : 1; 
+  }})
+  return newObj;
+};
+console.log(strVowelCount("Benny Solomon"));
 // 5. Write a function capitalize that takes a string as an
 // argument and will return the whole string capitalized.
 
