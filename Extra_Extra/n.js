@@ -22,7 +22,9 @@ countryToLiveIn(language, isIsland, population, country);
 
 
 
-
+console.log([1, 2, 3, 4, 5, 6, 7].reduce((previous, current) => {
+  return previous + current;
+}, 0));
 
 
 

@@ -1,13 +1,13 @@
-function findSmallest(a, b, c){
-    if (a < b && a < c){
-      return a;
-    } else if (b < a && b < c) {
-      return b;
-    } else {
-      return c;
-    }
-  }
-  console.log(findSmallest(52,66, 2));
+// function findSmallest(a, b, c){
+//     if (a < b && a < c){
+//       return a;
+//     } else if (b < a && b < c) {
+//       return b;
+//     } else {
+//       return c;
+//     }
+//   }
+//   console.log(findSmallest(52,66, 2));
 
 //   What is wrong with this code?
 // 1. First, find the line that contains the problem. Write it down.
